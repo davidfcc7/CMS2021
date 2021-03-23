@@ -1,0 +1,37 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container-fluid-nav{
+    background-color: cadetblue;
+}
+.container-fluid nav{
+    width: 100%;
+    margin: auto;
+    background-color: cadetblue;
+}
+.container-fluid .navbar-nav{
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    color: black;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: black;
+}
+.container-fluid .container .row{
+    padding-top: 5%;
+}
+.container-fluid .row{
+    padding-top: 5%;
+}
+.container-fluid .bg-inverse .py-3{
+    color: black;
+}
+.py-3{
+    background-color: cadetblue;
+}
