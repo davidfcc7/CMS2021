@@ -1,38 +1,5 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <!--Inicio nav-->
-    <div class="container-fluid-nav">
-        <nav class="navbar  sticky-top fixed-top navbar-expand-lg navbar-light container">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Home</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="#">Blog</a>
-                    </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </div>
-    <!--Fin nav-->
-
-    <!--Inicio Informacion-->
+<?php get_header(); ?>
+<!--Inicio Informacion-->
     <div class="container-fluid">
         <div class="container">
             <div class="row">
@@ -41,7 +8,7 @@
                 <p class="text-ph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
               </div>
               <div class="col-sm">
-                <img class="image-info" src="./images/home-office-336377_1920.jpg" alt="imagen de informacion">
+                <img class="image-info" src="<?php bloginfo('template_url')?>/images/home-office-336377_1920.jpg" alt="imagen de informacion">
               </div>
             </div>
           </div>
@@ -52,7 +19,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="card col-12 col-sm-6 col-md-4 mb-3">
-                <img src="./images/home-office-336377_1920.jpg" class="card-img-top img-fluid" alt="...">
+                <img src="<?php bloginfo('template_url')?>/images/home-office-336377_1920.jpg" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -62,7 +29,7 @@
                 </div>
             </div>
             <div class="card col-12 col-sm-6 col-md-4 mb-3">
-                <img src="./images/home-office-336377_1920.jpg" class="card-img-top img-fluid" alt="...">
+                <img src="<?php bloginfo('template_url')?>/images/home-office-336377_1920.jpg" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -72,7 +39,7 @@
                 </div>
             </div>
             <div class="card col-12 col-sm-6 col-md-4 mb-3">
-                <img src="./images/home-office-336377_1920.jpg" class="card-img-top img-fluid" alt="...">
+                <img src="<?php bloginfo('template_url')?>/images/home-office-336377_1920.jpg" class="card-img-top img-fluid" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
