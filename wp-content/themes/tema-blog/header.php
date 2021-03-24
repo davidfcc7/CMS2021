@@ -17,16 +17,15 @@
         <nav class="navbar  sticky-top fixed-top navbar-expand-lg navbar-light container">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Home</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="#">Blog</a>
-                    </li>
-                </ul>
-              </div>
+              
+              <?php wp_nav_menu(array(
+                'theme_location' => 'topMenu',
+                'container' => 'div',
+                'container_class' => 'collapse navbar-collapse',
+                'container_id' => 'navbarNav',
+                'items_wrap' => '<ul class="navbar-nav">%3$s</ul>',
+                'menu_class' => 'nav-item active'
+              ) ); ?>
             </div>
           </nav>
     </div>

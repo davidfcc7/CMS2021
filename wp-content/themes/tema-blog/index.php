@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <!--Inicio Informacion-->
     <div class="container-fluid">
-        <div class="container">
+        <div class="container my-5">
             <div class="row">
               <div class="col-sm-6 col-md-6">
                 <h1>Información</h1>
@@ -15,40 +15,25 @@
     </div>
     <!--Inicio Informacion-->
 
+        
     <!--Inicio Contenido Blog-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="card col-12 col-sm-6 col-md-4 mb-3">
-                <img src="<?php bloginfo('template_url')?>/images/home-office-336377_1920.jpg" class="card-img-top img-fluid" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Etiqueta / Autor / Fecha / Categoria</small>
-                </div>
+    <div class="container my-5">
+      <div class="row">
+      <?php if(have_posts() ): while (have_posts() ): the_post(); ?>
+        <div class="col-12 col-sm-6 col-md-4 mb-3">
+          <div class="card">
+            <img src="<?php bloginfo('template_url')?>/images/home-office-336377_1920.jpg" class="card-img-top img-fluid" alt="imagen card">
+            <div class="card-body">
+              <a href="<?php the_permalink(); ?>"><h4 class="card-title"><?php the_title(); ?></h4></a>
+              <p class="card-text"><?php the_excerpt(); ?></p>
             </div>
-            <div class="card col-12 col-sm-6 col-md-4 mb-3">
-                <img src="<?php bloginfo('template_url')?>/images/home-office-336377_1920.jpg" class="card-img-top img-fluid" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Etiqueta / Autor / Fecha / Categoria</small>
-                </div>
+            <div class="card-footer">
+              <small class="text-muted"><?php the_tags(); ?> / <?php the_author(); ?> / <?php echo get_the_date(); ?> / <?php the_category(', '); ?></small>
             </div>
-            <div class="card col-12 col-sm-6 col-md-4 mb-3">
-                <img src="<?php bloginfo('template_url')?>/images/home-office-336377_1920.jpg" class="card-img-top img-fluid" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Etiqueta / Autor / Fecha / Categoria</small>
-                </div>
-            </div>
+          </div>
         </div>
+        <?php endwhile; endif; ?>
+      </div>
     </div>
     <!--Fin Contenido Blog-->
     <?php get_footer(); ?>
