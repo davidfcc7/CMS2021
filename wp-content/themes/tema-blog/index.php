@@ -19,7 +19,7 @@
     <!--Inicio Contenido Blog-->
     <div class="container my-5">
       <div class="row">
-      <?php if(have_posts() ): while (have_posts() ): the_post(); ?>
+      <?php $i = 1; while (have_posts() && $i < 4 ): the_post(); ?>
         <div class="col-12 col-sm-6 col-md-4 mb-3">
           <div class="card">
           <a href="<?php the_permalink();?> "><?php
@@ -36,7 +36,7 @@
             </div>
           </div>
         </div>
-        <?php endwhile; endif; ?>
+        <?php $i++; endwhile; ?>
       </div>
     </div>
     <!--Fin Contenido Blog-->
