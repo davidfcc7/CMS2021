@@ -22,9 +22,14 @@
       <?php if(have_posts() ): while (have_posts() ): the_post(); ?>
         <div class="col-12 col-sm-6 col-md-4 mb-3">
           <div class="card">
-            <img src="<?php bloginfo('template_url')?>/images/home-office-336377_1920.jpg" class="card-img-top img-fluid" alt="imagen card">
-            <div class="card-body">
-              <a href="<?php the_permalink(); ?>"><h4 class="card-title"><?php the_title(); ?></h4></a>
+          <a href="./page.php"><?php
+          if (has_post_thumbnail()){
+            the_post_thumbnail('post-thumbnails', array ('class' => 'card-img-top img-fluid'));
+          }
+          ?></a>
+            <div class="card-block">
+              <a href="./page.php">
+              <h4 class="card-title"><?php the_title(); ?></h4></a>
               <p class="card-text"><?php the_excerpt(); ?></p>
             </div>
             <div class="card-footer">
